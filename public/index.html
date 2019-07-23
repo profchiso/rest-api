@@ -6,7 +6,7 @@
         <title>RESTful API </title>
       
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link rel="stylesheet" href="style.css">
+        
 
 </style>
     </heed>
@@ -28,7 +28,7 @@
                 <ol>
                   <li>Install json-server </b></li>
                   <li>Web browser (preferably Google Chrome)</li>
-                  <li> <b> POSTMAN application </li>
+                  <li>  POSTMAN application </li>
                   <li>JSONview a google chrome extension to help format the views <b>(optional)</b></li>
                 </ol>
               </div>
@@ -38,6 +38,18 @@
                 <div>
                   <p>open the project folder in a terminal and type <b>json-server --watch db.json</b></p>
                   
+                </div>
+                <div>
+                    <h4>below are the basic entry points</h4>
+                    
+                    <ol>
+                        <li>GET    /developers</li>
+                        <li>GET    /developers/1</li>
+                        <li>POST   /developers</li>
+                        <li>PUT    /developers/1</li>
+                        <li>PATCH  /developers/1</li>
+                        <li>DELETE /developers/1</li>
+                </ol>
                 </div>
                 <di>
                   <ol>
@@ -54,19 +66,19 @@
 
                   <li><h6>To add a developer</h6>
                     <p>Type this url<b> http://localhost:3000/developers </b>  in POSTMAN Address bar ,
-                      <br>below the url in POSTMAN app select<b>Body</b><br>below the Body select <b>x-www-form-urlencoded</b> <br>then enter the fieldnames  in the <b>KEY</b> and the values in the <b>VALUE</b><br>
-                     <p><b></p> Note the http method must be <b>POST</b></p>
+                      <br>below the url in POSTMAN app select<b> Body</b><br>below the Body select <b>x-www-form-urlencoded</b> <br>then enter the fieldnames  in the <b>KEY</b> and the values in the <b>VALUE</b><br>
+                     <p></p> Note the http method must be <b>POST</b></p>
                   </li>
 
                 <li><h6>To <b> update</b>  some fields  say <b>fullname, stack</b> of a developer with a given id</h6>
                   <p>Type this url<b> http://localhost:3000/developers/id </b>  in POSTMAN Address bar ,
-                    <br>below the url in POSTMAN app select<b>Body</b><br>below the Body select <b>x-www-form-urlencoded</b> <br>then enter the field name that you want to update in the <b>KEY</b> and the value you want it to be changed to in the <b>VALUE</b><br>
+                    <br>below the url in POSTMAN app select <b>Body</b><br>below the Body select <b>x-www-form-urlencoded</b> <br>then enter the field name that you want to update in the <b>KEY</b> and the value you want it to be changed to in the <b>VALUE</b><br>
                    where the id is an integer say 1<p><b>e.g http://localhost:3000/developers/1</b></p> Note the http method must be <b>PATCH</b></p>
                 </li>
 
                 <li><h6>To <b>update</b> all fields of a developer with a given id</h6>
                   <p>Type this url<b> http://localhost:3000/developers/id </b>  in POSTMAN Address bar ,
-                    <br>below the url in POSTMAN app select<b>Body</b><br>below the Body select <b>x-www-form-urlencoded</b> <br>then enter the  all the fields in the <b>KEY</b> and the value you want them to be changed to in the <b>VALUE</b> then click send<br>
+                    <br>below the url in POSTMAN app select<b> Body</b><br>below the Body select <b>x-www-form-urlencoded</b> <br>then enter the  all the fields in the <b>KEY</b> and the value you want them to be changed to in the <b>VALUE</b> then click send<br>
                    where the id is an integer say 1<p><b>e.g http://localhost:3000/developers/1</b></p> Note the http method must be <b>PUT</b></p>
                 </li>
 
@@ -85,9 +97,9 @@
 
 
                 <li><h6>You can also search a developer using any of the fields say email </h6>
-                  <p>Type this url<b> http://localhost:3000/developers?<b>fieldname</b>=fieldValue   </b>  in POSTMAN Address bar ,
+                  <p>Type this url http://localhost:3000/developers?<b>fieldname</b>=fieldValue   </b>  in POSTMAN Address bar ,
                      then click send<br>
-                   where the fieldname can be any of the field say email<p><b>e.g http://localhost:3000/developers?email=okoriechinedusunday@gmail.com</p> Note the http method must be <b>GET</b></p>
+                   where the fieldname can be any of the field say email<p>e.g http://localhost:3000/developers?email=okoriechinedusunday@gmail.com</p> Note the http method must be <b>GET</b></p>
                 </li>
 
                 </ol>
