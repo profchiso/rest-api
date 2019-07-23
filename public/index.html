@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <heed>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width initial-scale=1.0">
+        <title>RESTful API </title>
+      
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
+
+</style>
+    </heed>
+    <body>
+      <div class="container">
+        <header>
+            <h2>Simple RESTful JSON HTTP API Task </h2>
+            <p>Implemented by <b>OKORIE CHINEDU SUNDAY</b></p>
+        </header>
+        <main>
+            <section>
+              <div class="">
+                <p>See instructions below on how to use the API</p>
+              </div>
+
+              <div class="">
+                <h4>REQUIREMENTS</h4>
+                <p>To run the API, the user needs the following to perform CRUD operations</p>
+                <ol>
+                  <li>Install json-server </b></li>
+                  <li>Web browser (preferably Google Chrome)</li>
+                  <li> <b> POSTMAN application </li>
+                  <li>JSONview a google chrome extension to help format the views <b>(optional)</b></li>
+                </ol>
+              </div>
+
+              <div class="">
+                  <h4>How to run</h4>
+                <div>
+                  <p>open the project folder in a terminal and type <b>json-server --watch db.json</b></p>
+                  
+                </div>
+                <di>
+                  <ol>
+                  <li><h6>To  view all developers</h6>
+                  <p>Type this url <b> http://localhost:3000/developers </b> in POSTMAN Address bar and click on send<p>Note the HTTP Method must be <b>GET</b></p>
+                </li>
+
+
+                <li><h6>To  view a developer with id</h6>
+                  <p>Type this url<b> http://localhost:3000/developers/id </b>  in POSTMAN Address bar and click on send, where the <b>id</b> is an integer say 1<p><b>e.g http://localhost:3000/developers/1</b></p> Note the http method must be <b>GET</b></p>
+                </li>
+
+               
+
+                  <li><h6>To add a developer</h6>
+                    <p>Type this url<b> http://localhost:3000/developers </b>  in POSTMAN Address bar ,
+                      <br>below the url in POSTMAN app select<b>Body</b><br>below the Body select <b>x-www-form-urlencoded</b> <br>then enter the fieldnames  in the <b>KEY</b> and the values in the <b>VALUE</b><br>
+                     <p><b></p> Note the http method must be <b>POST</b></p>
+                  </li>
+
+                <li><h6>To <b> update</b>  some fields  say <b>fullname, stack</b> of a developer with a given id</h6>
+                  <p>Type this url<b> http://localhost:3000/developers/id </b>  in POSTMAN Address bar ,
+                    <br>below the url in POSTMAN app select<b>Body</b><br>below the Body select <b>x-www-form-urlencoded</b> <br>then enter the field name that you want to update in the <b>KEY</b> and the value you want it to be changed to in the <b>VALUE</b><br>
+                   where the id is an integer say 1<p><b>e.g http://localhost:3000/developers/1</b></p> Note the http method must be <b>PATCH</b></p>
+                </li>
+
+                <li><h6>To <b>update</b> all fields of a developer with a given id</h6>
+                  <p>Type this url<b> http://localhost:3000/developers/id </b>  in POSTMAN Address bar ,
+                    <br>below the url in POSTMAN app select<b>Body</b><br>below the Body select <b>x-www-form-urlencoded</b> <br>then enter the  all the fields in the <b>KEY</b> and the value you want them to be changed to in the <b>VALUE</b> then click send<br>
+                   where the id is an integer say 1<p><b>e.g http://localhost:3000/developers/1</b></p> Note the http method must be <b>PUT</b></p>
+                </li>
+
+                <li><h6>To <b>delete</b> a developer with a given id</h6>
+                  <p>Type this url<b> http://localhost:3000/developers/id </b>  in POSTMAN Address bar ,
+                     then click send<br>
+                   where the id is an integer say 1<p><b>e.g http://localhost:3000/developers/1</b></p> note the http method must be <b>DELETE</b></p>
+                </li>
+
+                <li><h6>To <b>sort</b> the developers using any of the fields</h6>
+                  <p>Type this url<b> http://localhost:3000/developers?_sort=<b>fieldname</b>&_order=asc or desc  </b>  in POSTMAN Address bar ,
+                     then click send<br>
+                   where the fieldname can be any of the field say stack<p><b>e.g http://localhost:3000/developers?_sort=stack&_order=asc</p> Note the http method must be <b>GET</b></p>
+                </li>
+
+
+
+                <li><h6>You can also search a developer using any of the fields say email </h6>
+                  <p>Type this url<b> http://localhost:3000/developers?<b>fieldname</b>=fieldValue   </b>  in POSTMAN Address bar ,
+                     then click send<br>
+                   where the fieldname can be any of the field say email<p><b>e.g http://localhost:3000/developers?email=okoriechinedusunday@gmail.com</p> Note the http method must be <b>GET</b></p>
+                </li>
+
+                </ol>
+                </di>
+
+              </div> 
+            </section>
+        </main>
+        <footer>
+           <div class="">
+             <h4> DEVELOPERS CONTACTS</h4>
+            <p>Name: Okorie chinedu sunady</p>
+            <p>E-Mail : okoriechinedusunday@gmail.com </p>
+            <p>Phone : +2348036009397</p>
+          </div>
+           
+        </footer>
+            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+          </div>
+    </body>
+</html>

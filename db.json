@@ -1,12 +1,25 @@
 {
-    "developers":[
-
-        {
-            "id": 1,
-            "fullname": "okorie chinedu sunday",
-            "email": "okoriechinedusunday@gmail.com",
-            "phone": "08036009397",
-            "stack": "full-stack"
-        }
-    ]
+  "developers": [
+    {
+      "id": 1,
+      "fullname": "okorie chinedu sunday",
+      "email": "okoriechinedusunday@gmail.com",
+      "phone": "08036009397",
+      "stack": "full-stack"
+    },
+    {
+      "fullname": "hello world",
+      "email": "hello@developer.com",
+      "phone": "08036009397",
+      "stack": "front-end",
+      "id": 2
+    },
+    {
+      "fullname": "ken ben",
+      "email": "ben@developer.com",
+      "phone": "08036009397",
+      "stack": "back-end",
+      "id": 3
+    }
+  ]
 }
